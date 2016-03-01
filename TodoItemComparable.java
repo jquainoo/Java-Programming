@@ -1,3 +1,13 @@
+/*
+This is a continuation of problem sets 9 and 13. You may either use your own TodoItem and TodoList classes, or the ones 
+posted as solutions (or a combination of the two).
+
+a) Make TodoItem implement the Comparable<TodoItem> interface. To do this, you will need to write the method compareTo,
+ which should compare two TodoItems based on their due date (you can assume all items have the same year).
+
+Test your compareTo method by calling it three times in the main() method.
+*/
+
 package cuny.lehman.cmp326;
 
 public class TodoItemComparable extends TodoItem implements Comparable<TodoItem>{
