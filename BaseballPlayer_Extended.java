@@ -52,6 +52,7 @@ public class BaseballPlayer_Extended {
 		return "Player's name: "+ name + "\nTeam: "+team + "\nBatting Average: "+ this.battingAverage();
 	}
 	
+	@Override
 	public boolean equals(BaseballPlayer_Extended player){
 		return (player instanceof BaseballPlayer_Extended && ((BaseballPlayer_Extended)player).name.equalsIgnoreCase(this.name) && ((BaseballPlayer_Extended)player).team.equalsIgnoreCase(this.team));
 	}
