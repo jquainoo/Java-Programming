@@ -19,7 +19,11 @@ public class ReverseArray {
 	
 	public static void main(String[] args) {
 		int[] arr = {1,2,3,4,5,6,7,8,56,73,45};
+		int[] arr1 = {1,2,3,4};
+		int[] arr2 = {13,21,53,49,78,34,56,70};
 		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr)));
+		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr1)));
+		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr2)));
 	}
 
 }
