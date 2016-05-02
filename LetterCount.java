@@ -15,8 +15,8 @@ public class LetterCount {
 		java.io.File file = new java.io.File(inputFile);
 		java.util.ArrayList<String> list = new java.util.ArrayList<>();
 		
-		try(
-				Scanner read = new Scanner(file);
+		try(  //using Java's try-with-resource
+				Scanner read = new Scanner(file);  
 				PrintWriter writer = new PrintWriter(outputFile, "UTF-8");
 				)
 		{
