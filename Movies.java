@@ -88,8 +88,6 @@ public class Movies implements Comparable<Movies> {
 			input = keyStroke.nextLine();
 			if(!input.equalsIgnoreCase("done")){
 				String[] str = input.split(",");
-				str[0] = str[0];
-				str[1] = str[1];
 				movies.add(new Movies(str[0], str[1]));
 			}
 			else
