@@ -13,9 +13,9 @@ public class BakingConverter {
 		double tableSpn, teaSpn;
 		java.util.Scanner input = new java.util.Scanner(System.in);
 		System.out.print("Enter number of table spoon and tea spoon: ");
-		tableSpn = input.nextDouble();
-		teaSpn = input.nextDouble();
-		System.out.printf("There is %.3fmL.", ((tableSpn * 14.7868)+ (teaSpn * 4.9289)));
+		tableSpn = input.nextDouble() * 14.7868;
+		teaSpn = input.nextDouble() * 4.9289;
+		System.out.printf("There is %.3fmL.", ((tableSpn)+ (teaSpn)));
 		input.close();
 
 	}
