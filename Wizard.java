@@ -24,10 +24,9 @@ public class Wizard extends GameCharacter {
 		if(this instanceof GameCharacter && (new java.util.Random().nextInt(20)) <= 10 && ((GameCharacter)opponent).isDefending == false){
 			opponent.health -= 10;
 			opponent.isDefending = true;
-			//System.out.println(opponent.health);
 		}
 		else
-			System.out.println("Health:"+opponent.health + "%");
+			System.out.println("Health: "+ opponent.health + "%");
 	}
 	
 	@Override
