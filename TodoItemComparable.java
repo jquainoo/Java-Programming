@@ -18,19 +18,12 @@ public class TodoItemComparable extends TodoItem implements Comparable<TodoItem>
 
 	@Override
 	public int compareTo(TodoItem item) {
-		if (item instanceof TodoItem && this.day == ((TodoItem)item).day && this.month == ((TodoItem)item).month)
-			return 1;
-		else
-			return -1;
+		return (item instanceof TodoItem && this.day == ((TodoItem)item).day && this.month == ((TodoItem)item).month)
 	}
 	
-
 	public static void main(String[] args) {
 		TodoItemComparable item = new TodoItemComparable("Walk", 3, 4, true);
 		TodoItemComparable item2 = new TodoItemComparable("Sing", 3, 4, false);
 		System.out.println(item.compareTo(item2));
-
-
 	}
-
 }
