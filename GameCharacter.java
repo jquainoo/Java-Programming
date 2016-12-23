@@ -57,7 +57,6 @@ public class GameCharacter {
 		this.name = name;
 		this.health = health;
 		this.isDefending = isDefending;
-		
 	}
 
 	public String getName() {
@@ -125,5 +124,4 @@ public class GameCharacter {
 			System.out.println(playerOne.name + " won the game");
 		input.close();
 	}
-
 }
