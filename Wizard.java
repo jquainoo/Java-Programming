@@ -20,7 +20,7 @@ public class Wizard extends GameCharacter {
 		
 	}
 	
-	public void specialAttack(GameCharacter opponent){
+	public static void specialAttack(GameCharacter opponent){
 		if(this instanceof GameCharacter && (new java.util.Random().nextInt(20)) <= 10 && ((GameCharacter)opponent).isDefending == false){
 			opponent.health -= 10;
 			opponent.isDefending = true;
@@ -35,9 +35,8 @@ public class Wizard extends GameCharacter {
 	}
 	
 	public static void test2(){
-		Wizard wizardOne = new Wizard();
 		Wizard wizardTwo = new Wizard();
-		wizardOne.specialAttack(wizardTwo);
+		Wizard.specialAttack(wizardTwo);
 	}
 
 	public static void main(String[] args) {
