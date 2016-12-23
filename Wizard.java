@@ -40,7 +40,7 @@ public class Wizard extends GameCharacter {
 	}
 
 	public static void main(String[] args) {
-		test2();
+		Wizard.test2();
 	}
 
 }
