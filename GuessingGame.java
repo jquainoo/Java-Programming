@@ -8,7 +8,6 @@
  */
 package cuny.lehman.cmp326;
 public class GuessingGame {
-
 	public static void main(String[] args) {
 		java.util.Scanner scan = new java.util.Scanner(System.in);
 		int guess, guessNumber; String response; 
@@ -29,10 +28,10 @@ public class GuessingGame {
 				response = scan.next();
 				if(response.charAt(0) == 'Y' || response.charAt(0) == 'y'){
 					guessNumber = 1 + new java.util.Random().nextInt(10); //Switches the secret number
-					guess = 2000;
+					guess = 2000; //resets guess so its not equal
 				}
 				else
-					System.out.println("You won "+wins +" out of "+ countGuess +" guesses");
+					System.out.println("You won "+ wins +" out of "+ countGuess +" guesses");
 			}
 		}
 		while(guess != guessNumber);
