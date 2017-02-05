@@ -7,25 +7,24 @@
 package cuny.lehman.cmp326;
 public class ReverseArray {
 	
-	public static int[] reverseArray(int[] inArray){
+	public class ReverseArray<T> {
+
+	public static <T>  T[] reverseArray(T[] inArray){
 		int low = 0; int high = inArray.length-1;
 		while(low < high){
-			int temp = inArray[low];
+			T temp = inArray[low];
 			inArray[low] = inArray[high];
 			inArray[high] = temp;
 			low++; high--;
 		}
 		return inArray;
 	}
-	
-	
+
 	public static void main(String[] args) {
-		int[] arr = {1,2,3,4,5,6,7,8,56,73,45};
-		int[] arr1 = {1,2,3,4};
-		int[] arr2 = {13,21,53,49,78,34,56,70};
-		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr)));
-		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr1)));
-		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(arr2)));
+		Integer[] array1 = {1,2,3,4,5,6,7,8,56,73,45};
+		String[] array2 = {"Kofi", "Kwame","Yaw"};
+		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array2)));
+		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array1)));
 	}
 
 }
