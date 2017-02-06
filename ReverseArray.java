@@ -23,6 +23,7 @@ public class ReverseArray {
 	public static void main(String[] args) {
 		Integer[] array1 = {1,2,3,4,5,6,7,8,56,73,45};
 		String[] array2 = {"Kofi", "Kwame","Yaw"};
+		Double[] array3 = {13.2,567.35,56.0, 90.34, 206.6};
 		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array2)));
 		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array1)));
 	}
