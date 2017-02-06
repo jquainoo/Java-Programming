@@ -26,6 +26,7 @@ public class ReverseArray {
 		Double[] array3 = {13.2,567.35,56.0, 90.34, 206.6};
 		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array2)));
 		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array1)));
+		System.out.println(java.util.Arrays.toString(ReverseArray.reverseArray(array3)));
 	}
 
 }
