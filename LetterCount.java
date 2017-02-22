@@ -54,5 +54,4 @@ public class LetterCount {
 		readFile(inputFile, outputFile, character);
 		input.close();
 	}
-
 }
