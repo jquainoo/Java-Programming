@@ -49,7 +49,7 @@ public class LetterCount {
 		String inputFile = input.nextLine();
 		System.out.print("Enter name of output file. eg.'file.txt': ");
 		String outputFile = input.nextLine();
-		System.out.println("Enter a character you want to count: ");
+		System.out.println("Enter a character you wish count: ");
 		char character = input.nextLine().charAt(0);
 		readFile(inputFile, outputFile, character);
 		input.close();
