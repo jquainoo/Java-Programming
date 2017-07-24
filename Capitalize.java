@@ -5,27 +5,28 @@
  * Call this method with at least three different inputs in the main method to test it.
  * @author leonjoel
  */
-package cuny.lehman.cmp326;
 public class Capitalize {
-	
+
 	public static String CapitalizeVowel(String word){
-		String vowel = "aeiou", newWord = ""; char character;
+		String newWord = ""; char character;
 		for(int i = 0; i < word.length(); i++){
 			character = word.charAt(i);
-			for(int x = 0; x < vowel.length(); x++){
-			if(character == vowel.charAt(x))
+			if(isVowel(character))
 				character = Character.toUpperCase(character);
-			}
+			else
+				character = Character.toLowerCase(character);
 			newWord += character;
 		}
 		return newWord;
 	}
 
+	public static boolean isVowel(char character){
+		return "aeiou".contains(Character.toString(character));
+	}
+
 	public static void main(String[] args) {
-		java.util.Scanner input = new java.util.Scanner(System.in);
-		System.out.print("Enter a word: ");
-		String word = input.nextLine().toLowerCase();
-		System.out.println(CapitalizeVowel(word));
-		input.close();
+		System.out.println(CapitalizeVowel("Favorite fruit is apple"));
+		System.out.println(CapitalizeVowel("a leapping frog"));
+		System.out.println(CapitalizeVowel("Canada -> Toronto"));
 	}
 }
