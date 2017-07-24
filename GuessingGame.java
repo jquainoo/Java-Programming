@@ -28,7 +28,7 @@ public class GuessingGame {
 				response = scan.next();
 				if(response.charAt(0) == 'Y' || response.charAt(0) == 'y'){
 					guessNumber = 1 + new java.util.Random().nextInt(10); //Switches the secret number
-					guess = 2000; //resets guess so its not equal
+					guess = -1; //resets guess so its not equal
 				}
 				else
 					System.out.println("You won "+ wins +" out of "+ countGuess +" guesses");
