@@ -14,35 +14,38 @@ package cuny.lehman.cmp326;
 public class PigLatin {
 
 	public static boolean isVowel(char character){
-		return (character == 'a' || character == 'e' || character == 'i' || character == 'o' || 
-				character == 'u');
+		return "aeiou".contains(Character.toString(character));
 	}
 	
+	public static String pigLatin(String word){
+		int count = 0;
+		char firstChar = word.charAt(0);
+		if(word.charAt((int)word.length()/2) == 'y')
+			return word + "hay";
+		else if(isVowel(firstChar))
+			return word + "hay";
+		else if(!isVowel(firstChar) && Character.toLowerCase(firstChar) != 'y'){
+			for(int i = 0; i < word.length(); i++){
+				if(isVowel(word.charAt(i))){
+					break;
+				}
+				else{
+					count++;
+				}
+			}
+			return word.substring(count, word.length()) + word.substring(0, count) + "ay";
+		}
+		else if(firstChar == 'y'){
+			return word.substring(1, word.length()) + 'y' + "ay";	
+		}
+		return null;	
+	}
+
 	public static void main(String[] args) {
 		java.util.Scanner input = new java.util.Scanner(System.in);
-		String newWord = null;
 		System.out.print("Enter a word: ");
 		String word = input.nextLine();
-		for(int i = 0; i < word.length(); i++){
-			char firstChar = word.charAt(0);
-			char character = word.charAt(i);
-			if(isVowel(firstChar))
-				newWord = word + "hay";
-			else if(!isVowel(character))
-				newWord = word.substring(1) + character + "ay";
-			else if(firstChar == 'y'){
-				newWord = word.substring(1) + 'y' + "ay";	
-			}
-			else if(word.charAt((int)word.length()/2) == 'y')
-				newWord = word + "hay";
-		}
-		System.out.println(newWord);
+		System.out.println(pigLatin(word));
 		input.close();
-		
-		System.out.println(isVowel('b'));
-	}
-	
-	
-		
-
+	}	
 }
