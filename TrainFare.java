@@ -13,8 +13,7 @@ then display an error message.
 public class TrainFare{
 	
 	public static String ticketRate(int zone, String ticketType) throws Exception{
-		char character = Character.toLowerCase(ticketType.charAt(0));
-		switch(character){
+		switch(Character.toLowerCase(ticketType.charAt(0))){
 		case 'a':
 			switch(zone){
 			case 2:
