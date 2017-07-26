@@ -14,15 +14,15 @@ package cuny.lehman.cmp326;
 public class TrainFare{
 	
 	public static String ticketRate(int zone, String ticketType) throws Exception{
-		if(zone <= 2 && ticketType.charAt(0) == 'a' || ticketType.charAt(0) == 'A')
+		if(zone <= 2 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
 			return "Fare is $3.";
-		else if(zone < 2 && ticketType.charAt(0) == 'c' || ticketType.charAt(0) == 'C')
+		else if(zone < 2 && Character.toLowerCase(ticketType.charAt(0)) == 'c')
 			return "Fare is $1.50";
-		else if(zone == 3 && ticketType.charAt(0) == 'a' || ticketType.charAt(0) == 'A')
+		else if(zone == 3 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
 			return "Fare is $4";
-		else if(zone == 3 || zone == 4 && ticketType.charAt(0) == 'c' || ticketType.charAt(0) == 'C')
+		else if(zone == 3 || zone == 4 && Character.toLowerCase(ticketType.charAt(0)) == 'c')
 			return "Fare is $3";
-		else if(zone == 4 && ticketType.charAt(0) == 'a' || ticketType.charAt(0) == 'A')
+		else if(zone == 4 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
 			return "Fare is $6";
 		else
 			return "ticket not found";
