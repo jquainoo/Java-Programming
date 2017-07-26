@@ -10,22 +10,37 @@ then display an error message.
  * @author leonjoel
  *
  */
-package cuny.lehman.cmp326;
 public class TrainFare{
 	
 	public static String ticketRate(int zone, String ticketType) throws Exception{
-		if(zone <= 2 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
-			return "Fare is $3.";
-		else if(zone < 2 && Character.toLowerCase(ticketType.charAt(0)) == 'c')
-			return "Fare is $1.50";
-		else if(zone == 3 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
-			return "Fare is $4";
-		else if(zone == 3 || zone == 4 && Character.toLowerCase(ticketType.charAt(0)) == 'c')
-			return "Fare is $3";
-		else if(zone == 4 && Character.toLowerCase(ticketType.charAt(0)) == 'a')
-			return "Fare is $6";
-		else
-			return "ticket not found";
+		char character = Character.toLowerCase(ticketType.charAt(0));
+		switch(character){
+		case 'a':
+			switch(zone){
+			case 2:
+				return "Fare is $3";
+			case 3:
+				return "Fare is $4";
+			case 4: 
+				return "Fare is $6";
+			default:
+				return "ticket not found";
+			}
+		
+		case 'c':
+			switch(zone){
+			case 1:
+				return "Fare is $1.50";
+			case 3:
+				return "Fare is $3";
+			case 4:
+				return "Fare is $3";
+			default:
+				return "ticket not found";
+			}
+			
+		}
+		return "ticket out of range";
 	}
 
 	public static void main(String[] args) throws Exception{
@@ -35,7 +50,6 @@ public class TrainFare{
 		zone = input.nextInt();
 		System.out.print("Enter ticket type (adult & child): ");
 		tType = input.next();
-		System.out.println();
 		System.out.println(ticketRate(zone, tType));
 		input.close();
 	}
