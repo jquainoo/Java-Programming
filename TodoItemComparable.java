@@ -7,9 +7,6 @@ a) Make TodoItem implement the Comparable<TodoItem> interface. To do this, you w
 
 Test your compareTo method by calling it three times in the main() method.
 */
-
-package cuny.lehman.cmp326;
-
 public class TodoItemComparable extends TodoItem implements Comparable<TodoItem>{
 	
 	public TodoItemComparable(String item, int month, int day, boolean isDone){
@@ -18,12 +15,17 @@ public class TodoItemComparable extends TodoItem implements Comparable<TodoItem>
 
 	@Override
 	public int compareTo(TodoItem item) {
-		return (item instanceof TodoItem && this.day == ((TodoItem)item).day && this.month == ((TodoItem)item).month)
+		if(this.day < item.day || this.month < item.month)
+			return 1;
+		else if(this.day == item.day && this.month == item.month)
+			return 0;
+		else
+			return -1;
 	}
 	
 	public static void main(String[] args) {
 		TodoItemComparable item = new TodoItemComparable("Walk", 3, 4, true);
-		TodoItemComparable item2 = new TodoItemComparable("Sing", 3, 4, false);
+		TodoItemComparable item2 = new TodoItemComparable("Sing", 8, 4, false);
 		System.out.println(item.compareTo(item2));
 	}
 }
