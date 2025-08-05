@@ -6,7 +6,6 @@ somehow be different than the attack(..) method in GameCharacter. For example, m
 succeeds half the time the Player tries it. You can call this method something other that specialAttack if you prefer (i.e. castSpell, 
 etc.)	 @author leonjoel
  */
-package cuny.lehman.cmp326;
 public class Wizard extends GameCharacter {
 	
 	public Wizard() {
